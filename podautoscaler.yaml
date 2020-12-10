@@ -22,3 +22,13 @@ spec:
       target: 
         type: AverageValue
         averageValue: 10Mi
+
+#averageUtilization(integer)	averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
+
+#averageValue(Quantity)	averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+
+#type(string)	type represents whether the metric type is Utilization, Value, or AverageValue
+
+#value(Quantity)	value is the target value of the metric (as a quantity).
+#
+#Controller Manager compare the metrics received from Metrics server API in regular intervals and scales the deployment once the defined threshold is crossed. HPA is a control loop as defined by the parameter --horizontal-pod-autoscaler-sync-period. By default it's set to 15 seconds
