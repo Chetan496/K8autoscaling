@@ -17,7 +17,9 @@ spec:
       target:
         type: AverageValue
         averageValue: 280Mi
-#290 Mebibytes is aboout 304MB
+#280 Mebibytes is aboout 295MB
 
 #when average memory used across all pods of document service increased more than 280Mi, the auto scaling will trigger.
+#So it does scale up
+# But our pods do not release memory quick. Hence scale down does not happen quick.
 
